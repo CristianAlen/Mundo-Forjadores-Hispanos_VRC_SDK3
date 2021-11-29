@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: ButtonSyncAnyone
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 83e813522cd55cf408659668bdc2f980,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 46326844296d1d846a0f8b9c1556b914,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export uiText\r\n    .sync clickCount, none\r\n   
     \r\n    __Boolean_0: %SystemBoolean, null\r\n    __obj_0: %UnityEngineGameObject,

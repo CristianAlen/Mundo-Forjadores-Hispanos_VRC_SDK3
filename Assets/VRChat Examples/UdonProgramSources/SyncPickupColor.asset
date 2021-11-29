@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
   m_Name: SyncPickupColor
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 226c8eba97e162a479ffdf5da3023aed,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f32da390901d108479f71a0c5d63de05,
     type: 2}
   udonAssembly: ".data_start\r\n\r\n    .export fromColor\r\n    .export targetRenderer\r\n   
     .export toColor\r\n    .export pickup\r\n    .sync syncColor, smooth\r\n    \r\n   
