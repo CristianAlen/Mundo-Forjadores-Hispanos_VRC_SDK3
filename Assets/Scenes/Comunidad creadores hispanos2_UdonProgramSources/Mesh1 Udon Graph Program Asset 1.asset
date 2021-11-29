@@ -1,0 +1,159 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f11136daadff0b44ac2278a314682ab, type: 3}
+  m_Name: Mesh1 Udon Graph Program Asset 1
+  m_EditorClassIdentifier: 
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 5eaea78de81677b4b90561d4e083c3e6,
+    type: 2}
+  udonAssembly: ".data_start\r\n\r\n    .export Mesh13\r\n    \r\n    __Boolean_0:
+    %SystemBoolean, null\r\n    __VRCPlayerApi_0: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   onPlayerTriggerEnterPlayer: %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_0:
+    %UnityEngineGameObject, this\r\n    __value_0: %SystemBoolean, null\r\n    __Boolean_1:
+    %SystemBoolean, null\r\n    __VRCPlayerApi_1: %VRCSDKBaseVRCPlayerApi, null\r\n
+    \   onPlayerTriggerExitPlayer: %VRCSDKBaseVRCPlayerApi, null\r\n    __instance_1:
+    %UnityEngineGameObject, this\r\n    __value_1: %SystemBoolean, null\r\n    Mesh13:
+    %UnityEngineGameObject, this\r\n\r\n.data_end\r\n\r\n.code_start\r\n\r\n    .export
+    _onPlayerTriggerEnter\r\n    \r\n    _onPlayerTriggerEnter:\r\n    \r\n        PUSH,
+    onPlayerTriggerEnterPlayer\r\n        PUSH, __VRCPlayerApi_0\r\n        COPY\r\n
+    \       PUSH, __VRCPlayerApi_0\r\n        PUSH, __Boolean_0\r\n        EXTERN,
+    \"VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean\"\r\n        PUSH, __Boolean_0\r\n
+    \       JUMP_IF_FALSE, 0x00000070\r\n        PUSH, Mesh13\r\n        PUSH, __instance_0\r\n
+    \       COPY\r\n        PUSH, __instance_0\r\n        PUSH, __value_0\r\n        EXTERN,
+    \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n        JUMP,
+    0x00000070\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n    .export _onPlayerTriggerExit\r\n
+    \   \r\n    _onPlayerTriggerExit:\r\n    \r\n        PUSH, onPlayerTriggerExitPlayer\r\n
+    \       PUSH, __VRCPlayerApi_1\r\n        COPY\r\n        PUSH, __VRCPlayerApi_1\r\n
+    \       PUSH, __Boolean_1\r\n        EXTERN, \"VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean\"\r\n
+    \       PUSH, __Boolean_1\r\n        JUMP_IF_FALSE, 0x000000E8\r\n        PUSH,
+    Mesh13\r\n        PUSH, __instance_1\r\n        COPY\r\n        PUSH, __instance_1\r\n
+    \       PUSH, __value_1\r\n        EXTERN, \"UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid\"\r\n
+    \       JUMP, 0x000000E8\r\n        JUMP, 0xFFFFFFFC\r\n    \r\n\r\n.code_end\r\n"
+  assemblyError: 
+  graphData:
+    name: 
+    description: 
+    nodes:
+    - fullName: Event_OnPlayerTriggerEnter
+      uid: 09e8b7f4-ac49-4af0-b26b-50ee95e7a882
+      position: {x: -130.85266, y: 165.8273}
+      nodeUIDs: []
+      flowUIDs:
+      - 25fe956d-9e99-48fd-b9ca-216cdf60c05f
+      nodeValues: []
+    - fullName: Event_OnPlayerTriggerExit
+      uid: 4e8fa657-ed43-493e-aed7-eeb3e4cda6b9
+      position: {x: -244.50757, y: 592.31036}
+      nodeUIDs: []
+      flowUIDs:
+      - ca73ab78-97a9-4ee3-b6aa-eab3a6310ae8
+      nodeValues: []
+    - fullName: UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid
+      uid: b2943452-6e08-4675-b804-ca16359cb53d
+      position: {x: 628.50757, y: 342.98096}
+      nodeUIDs:
+      - a7117f4e-b04f-4e52-b99e-6f36ba0e739b|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
+    - fullName: UnityEngineGameObject.__SetActive__SystemBoolean__SystemVoid
+      uid: 316db3a3-0e4d-401e-baee-6f4d27c969f6
+      position: {x: 608.8158, y: 493.54755}
+      nodeUIDs:
+      - a7117f4e-b04f-4e52-b99e-6f36ba0e739b|0
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
+    - fullName: VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean
+      uid: 1e76cec5-b31d-4c3a-9029-b1038cea94ea
+      position: {x: 169.70724, y: 413.48413}
+      nodeUIDs:
+      - 09e8b7f4-ac49-4af0-b26b-50ee95e7a882
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Branch
+      uid: 25fe956d-9e99-48fd-b9ca-216cdf60c05f
+      position: {x: 315.3938, y: 290.0255}
+      nodeUIDs:
+      - 1e76cec5-b31d-4c3a-9029-b1038cea94ea
+      flowUIDs:
+      - b2943452-6e08-4675-b804-ca16359cb53d
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
+    - fullName: VRCSDKBaseVRCPlayerApi.__get_isLocal__SystemBoolean
+      uid: cf54f833-6531-4900-8d64-e34d404738fc
+      position: {x: 107.70571, y: 668.6773}
+      nodeUIDs:
+      - 4e8fa657-ed43-493e-aed7-eeb3e4cda6b9
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    - fullName: Branch
+      uid: ca73ab78-97a9-4ee3-b6aa-eab3a6310ae8
+      position: {x: 313.73294, y: 714.17267}
+      nodeUIDs:
+      - cf54f833-6531-4900-8d64-e34d404738fc
+      flowUIDs:
+      - 316db3a3-0e4d-401e-baee-6f4d27c969f6
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
+    - fullName: Variable_UnityEngineGameObject
+      uid: 7212a657-3300-4403-9816-0afd61e1df6d
+      position: {x: -192, y: -440}
+      nodeUIDs:
+      - 
+      - 
+      - 
+      - 
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Mesh13
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|True
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|False
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|none
+    - fullName: Get_Variable
+      uid: a7117f4e-b04f-4e52-b99e-6f36ba0e739b
+      position: {x: -617.0117, y: 468.60052}
+      nodeUIDs:
+      - 
+      flowUIDs: []
+      nodeValues:
+      - unityObjectValue: {fileID: 0}
+        stringValue: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|7212a657-3300-4403-9816-0afd61e1df6d
+      - unityObjectValue: {fileID: 0}
+        stringValue: 
+    updateOrder: 0
+  graphElementData: []
+  viewTransform:
+    position: {x: 185.16367, y: 290.56415}
+    scale: 0.43232757
+  version: 1.0.0
+  showAssembly: 0
